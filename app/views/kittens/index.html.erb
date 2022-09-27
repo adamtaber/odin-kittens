@@ -1,0 +1,8 @@
+<h1 class='title'>Kittens</h1>
+<% @kittens.each do |kitten| %>
+  <div class='kitten-box'>
+    <%= link_to kitten.name, kitten %>
+    <%= button_to "Delete Kitten", kitten_path(kitten), :method => :delete %>
+  </div>
+<% end %>
+<%= link_to "Create New Kitten", new_kitten_path, class:'button' %>
